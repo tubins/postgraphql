@@ -97,6 +97,7 @@ with
       pg_catalog.pg_class as rel
       left join pg_catalog.pg_description as dsc on dsc.objoid = rel.oid and dsc.objsubid = 0
     where
+      rel.relname not in ('magesubmissiondetail_parts','magesubmissiondetail_parts') and 
       -- Select classes that are in our namespace, or are referenced in a
       -- procedure.
       (
